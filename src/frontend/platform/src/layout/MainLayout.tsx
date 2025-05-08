@@ -76,7 +76,7 @@ export default function MainLayout() {
                 <div className="flex h-9 my-[14px]">
                     <Link className="inline-block" to='/'>
                         {/* @ts-ignore */}
-                        <img src={__APP_ENV__.BASE_URL + '/login-logo-small.png'} className="w-[104px] ml-[38px] rounded dark:w-[104px]" alt="" />
+                        <img src={__APP_ENV__.BASE_URL + '/zh_login-logo-small.jpg'} className="w-[104px] ml-[38px] rounded dark:w-[104px]" alt="" />
                     </Link>
                 </div>
                 <div>

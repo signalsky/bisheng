@@ -296,7 +296,7 @@
 }
 
 .flow-bg-logo::before {
-	content: "BISHENG"; /* 设置文字内容 */
+	content: "正合智能"; /* 设置文字内容 */
 	font-size: 180px;
 	font-weight: bold;
 	color: rgba(232, 235 ,242,0.7);

@@ -117,5 +117,10 @@
   },
   "engines": {
     "node": ">= 18"
-  }
+  },
+  "description": "在开始之前，请确保你已经安装了以下工具：\r - Node.js (建议使用 LTS 版本)\r - npm 或 yarn 包管理工具",
+  "main": "postcss.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
