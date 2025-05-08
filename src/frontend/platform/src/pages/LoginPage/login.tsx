@@ -128,7 +128,7 @@ export const LoginPage = () => {
     return <div className='w-full h-full bg-background-dark'>
         <div className='fixed z-10 sm:w-[1280px] w-full sm:h-[720px] h-full translate-x-[-50%] translate-y-[-50%] left-[50%] top-[50%] border rounded-lg shadow-xl overflow-hidden bg-background-login'>
             <div className='w-[420px] h-[704px] m-[8px] hidden sm:block relative z-20'>
-                <img src={__APP_ENV__.BASE_URL + '/login-logo-big.png'} alt="logo_picture" className='w-full h-full dark:hidden' />
+                <img src={__APP_ENV__.BASE_URL + '/zh_login-logo-big.png'} alt="logo_picture" className='w-full h-full dark:hidden' />
                 <img src={__APP_ENV__.BASE_URL + '/login-logo-dark.png'} alt="logo_picture" className='w-full h-full hidden dark:block' />
                 {/* <iframe src={__APP_ENV__.BASE_URL + '/face.html'} className='w-full h-full'></iframe> */}
             </div>
