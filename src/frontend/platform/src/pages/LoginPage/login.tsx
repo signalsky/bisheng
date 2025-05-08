@@ -208,7 +208,7 @@ export const LoginPage = () => {
                         }
                         {appConfig.isPro && <LoginBridge onHasLdap={setIsLDAP} />}
                     </div>
-                    <div className=" absolute right-[16px] bottom-[16px] flex">
+                    {/* <div className=" absolute right-[16px] bottom-[16px] flex">
                         <span className="mr-4 text-sm text-gray-400 relative top-2">v{json.version}</span>
                         {!appConfig.noFace && <div className='help flex'>
                             <a href={"https://github.com/dataelement/bisheng"} target="_blank">
@@ -218,7 +218,7 @@ export const LoginPage = () => {
                                 <BookOpenIcon className="block h-[40px] w-[40px] gap-1 border p-[10px] rounded-[8px]  hover:bg-[#0055e3] hover:text-[white] hover:cursor-pointer" />
                             </a>
                         </div>}
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>

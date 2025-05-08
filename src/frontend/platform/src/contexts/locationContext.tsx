@@ -65,7 +65,7 @@ export function LocationProvider({ children }: { children: ReactNode }) {
   const [extraComponent, setExtraComponent] = useState(<></>);
   const [appConfig, setAppConfig] = useState<any>({
     libAccepts: [],
-    noFace: true
+    noFace: false
   })
 
   const loadConfig = () => {

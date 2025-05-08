@@ -188,7 +188,7 @@ export default function MainLayout() {
                             </>
                         }
                     </nav>
-                    {!appConfig.noFace && <div className="absolute left-0 bottom-0 w-[180px] p-2">
+                    {/* {!appConfig.noFace && <div className="absolute left-0 bottom-0 w-[180px] p-2">
                         <div className="help flex items-between my-3">
                             <TooltipProvider>
                                 <Tooltip>
@@ -214,7 +214,7 @@ export default function MainLayout() {
                                 </Tooltip>
                             </TooltipProvider>
                         </div>
-                    </div>}
+                    </div>} */}
                 </div>
                 <div className="flex-1 bg-background-main-content rounded-lg w-[calc(100vw-184px)]">
                     <ErrorBoundary
@@ -228,7 +228,7 @@ export default function MainLayout() {
         </div>
 
         {/* // mobile */}
-        <div className="fixed w-full h-full top-0 left-0 bg-[rgba(0,0,0,0.4)] sm:hidden text-sm z-50">
+        {/* <div className="fixed w-full h-full top-0 left-0 bg-[rgba(0,0,0,0.4)] sm:hidden text-sm z-50">
             <div className="w-10/12 bg-gray-50 mx-auto mt-[30%] rounded-xl px-4 py-10">
                 <p className=" text-sm text-center">{t('menu.forBestExperience')}</p>
                 {
@@ -242,7 +242,7 @@ export default function MainLayout() {
                     </div>
                 }
             </div>
-        </div>
+        </div> */}
     </div >
 };
 
