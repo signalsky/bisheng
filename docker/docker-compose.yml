@@ -93,7 +93,6 @@ services:
 
   frontend:
     container_name: bisheng-frontend
-    image: dataelement/bisheng-frontend:v1.1.1
     ports:
       - "3001:3001"
     environment:
@@ -104,6 +103,9 @@ services:
     restart: on-failure
     depends_on:
       - backend
+    build:
+      context: ../src/frontend
+      dockerfile: Dockerfile
 
   elasticsearch:
     container_name: bisheng-es
