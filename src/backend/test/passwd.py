@@ -14,7 +14,7 @@ def decrypt_token(encrypted_token: str) -> str:
 
 
 # 测试加密和解密
-password_original = "1234"
+password_original = "aa123456"
 encrypted = encrypt_token(password_original)
 decrypted = decrypt_token(encrypted)
 

@@ -38,7 +38,7 @@ export default function StartupLayout({ isAuthenticated }: { isAuthenticated?: b
   }, [isAuthenticated, navigate, data]);
 
   useEffect(() => {
-    document.title = 'BISHENG' // startupConfig?.appTitle || 'Deepseek';
+    document.title = '正合AI' // startupConfig?.appTitle || 'Deepseek';
   }, [startupConfig?.appTitle]);
 
   useEffect(() => {
