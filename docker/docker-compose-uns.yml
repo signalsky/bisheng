@@ -1,12 +1,12 @@
 services:
-  bisheng-unstructured:
-    container_name: bisheng-unstructured
+  yue-unstructured:
+    container_name: yue-unstructured
     image: dataelement/bisheng-unstructured:v0.0.3.11
     ports:
       - "10001:10001"
     environment:
       # 填写ocr_sdk或rt服务的根地址
-      # server_address: bisheng-rt:9001
+      # server_address: yue-rt:9001
       # 这里填 ocr_sdk 或 rt
       # server_type: ocr_sdk
       TZ: Asia/Shanghai

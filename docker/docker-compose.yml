@@ -1,6 +1,6 @@
 services:
   mysql:
-    container_name: bisheng-mysql
+    container_name: yue-mysql
     image: mysql:8.0
     
     ports:
@@ -21,7 +21,7 @@ services:
     restart: on-failure
 
   redis:
-    container_name: bisheng-redis
+    container_name: yue-redis
     image: redis:7.0.4
     ports:
       - "6379:6379"
@@ -39,7 +39,7 @@ services:
     restart: on-failure
 
   office:
-    container_name: bisheng-office
+    container_name: yue-office
     image: onlyoffice/documentserver:7.1.1
     ports:
       - "8701:80"
@@ -52,7 +52,7 @@ services:
     restart: on-failure
 
   backend:
-    container_name: bisheng-backend
+    container_name: yue-backend
     ports:
       - "7860:7860"
     environment:
@@ -94,7 +94,7 @@ services:
       dockerfile: Dockerfile
 
   frontend:
-    container_name: bisheng-frontend
+    container_name: yue-frontend
     ports:
       - "3001:3001"
     environment:
@@ -110,7 +110,7 @@ services:
       dockerfile: Dockerfile
 
   elasticsearch:
-    container_name: bisheng-es
+    container_name: yue-es
     image: docker.io/bitnami/elasticsearch:8.12.0
     user: root
     ports:
