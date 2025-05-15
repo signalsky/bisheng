@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+  bge-m3:
+    image: vllm/vllm-openai:v0.8.4
+    container_name: bge-m3
+    restart: always
+    ports:
+      - "9009:8000"
+    volumes:
+      - /home/ubuntu/tokenai/vllm_models/bge-m3/:/mnt/model/
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    command: >
+      --served-model-name BAAI/bge-m3
+      --model="/mnt/model/"
+      --task embedding
+      --gpu-memory-utilization 0.4
+      --tensor-parallel-size 1
+      --api-key vllm
+
+  reranker-v2-m3:
+    image: vllm/vllm-openai:v0.8.4
+    container_name: reranker-v2-m3
+    restart: always
+    ports:
+      - "9007:8000"
+    volumes:
+      - /home/ubuntu/tokenai/vllm_models/bge-reranker-v2-m3/:/mnt/model/
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    command: >
+      --served-model-name BAAI/bge-reranker-v2-m3
+      --model="/mnt/model/"
+      --task score
+      --tensor-parallel-size 1
+      --gpu-memory-utilization 0.4
+      --api-key vllm    
