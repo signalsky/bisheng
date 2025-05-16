@@ -14,7 +14,7 @@ services:
       - ${DOCKER_VOLUME_DIRECTORY:-.}/mysql/data:/var/lib/mysql
       - ${DOCKER_VOLUME_DIRECTORY:-.}/mysql/files:/var/lib/mysql-files
     healthcheck:
-      test: ["CMD-SHELL", "exit | mysql -u root -p$$MYSQL_ROOT_PASSWORD"]
+      test: ["CMD-SHELL", "mysqladmin ping -u root -p'$${MYSQL_ROOT_PASSWORD}' || exit 1"]
       start_period: 30s
       interval: 20s
       timeout: 10s
