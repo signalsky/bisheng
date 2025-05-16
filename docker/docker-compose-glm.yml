@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  glm-4-9b-chat:
+    image: vllm/vllm-openai:v0.8.4
+    container_name: glm-4-9b-chat
+    restart: always
+    ports:
+      - "9010:8000"
+    volumes:
+      - /home/ubuntu/mxc/glm-4-9b-chat/:/mnt/model/
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    command: >
+      --served-model-name glm-4-9b-chat
+      --model="/mnt/model/"
+      --task generate  # 修改为generate任务类型
+      --gpu-memory-utilization 0.6
+      --tensor-parallel-size 1
+      --api-key vllm
+      --chat-template chatml  # 添加聊天模板参数
