@@ -9,7 +9,7 @@ export default function Word({ data, workflow }) {
     const wordUrl = appConfig.officeUrl
     // console.log('wordUrl :>> ', wordUrl, data);
     // 本地调试
-    // const host = 'http://192.168.106.120:3002'
+    // const host = 'http://106.14.25.208:7860'
     const host = `${location.origin}${__APP_ENV__.BASE_URL}`
     const backUrl = workflow ? `${host}/api/v1/workflow/report/callback`
         : `${host}/api/v1/report/callback` // 后端服务地址

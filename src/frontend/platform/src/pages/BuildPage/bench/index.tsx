@@ -116,7 +116,7 @@ export default function index() {
                 <CardContent className="pt-4 relative  ">
                     <div className="w-full  max-h-[calc(100vh-180px)] overflow-y-scroll scrollbar-hide">
                         <ToggleSection
-                            title="工作台入口"
+                            title="聊天入口"
                             enabled={formData.menuShow}
                             onToggle={(enabled) => setFormData(prev => ({ ...prev, menuShow: enabled }))}
                         >{null}</ToggleSection>

@@ -207,7 +207,7 @@ const EditTool = forwardRef((props: any, ref) => {
 
     // 发送请求给后端获取Schema
     const handleImportSchema = () => {
-        // http://192.168.106.120:3002/openapi-test.json
+        // http://106.14.25.208:7860/openapi-test.json
         captureAndAlertRequestErrorHoc(downloadToolSchema({ download_url: schemaUrl.current })).then(res => {
             schemaUrl.current = ''
             if (!res) return
