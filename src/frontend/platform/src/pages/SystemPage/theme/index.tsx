@@ -110,7 +110,7 @@ export default function Theme() {
                 className="flex space-x-2 h-[20px] mt-4 mb-6">
                 <div>
                     <Label className="flex justify-center">
-                        <RadioGroupItem className="mr-2" value="logo" />BISHENG logo
+                        <RadioGroupItem className="mr-2" value="logo" />zhenghe logo
                     </Label>
                 </div>
                 <div>
