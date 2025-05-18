@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  chatglm3-6b:
+    image: vllm/vllm-openai:latest
+    container_name: chatglm3-6b
+    command: [
+      "--model", "/models/chatglm3-6b",
+      "--trust-remote-code",
+      "--tensor-parallel-size", "1",
+      "--max-model-len", "4096"
+    ]
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    ipc: host
+    ports:
+      - "8000:8000"
+    volumes:
+      - ${DOCKER_VOLUME_DIRECTORY:-.}/models/:/mnt/model/
+
