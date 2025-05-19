@@ -108,7 +108,7 @@ const useReport = (versionKey, onchange) => {
 
     const handleCreate = async () => {
         // 本地调试
-        // setDocx(docx => ({ ...docx, path: 'http://192.168.106.120:3002/empty.docx' }))
+        // setDocx(docx => ({ ...docx, path: 'http://106.14.25.208:7860/empty.docx' }))
         setDocx(doc => ({ ...docx, path: location.origin + __APP_ENV__.BASE_URL + '/empty.docx' }))// 文档服务能访问到的文件地址
     }
 

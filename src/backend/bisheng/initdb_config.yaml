@@ -1,5 +1,5 @@
 knowledges: # 知识库相关配置
-  unstructured_api_url: ""  # 非必填，若要开启溯源能力则必填。如果在私有环境部署了服务，可以填入地址：http://ip:port/v1/etl4llm/predict。注意：添加地址后，需要手动刷新页面后在知识库中上传文档。
+  unstructured_api_url: "http://ip:10001/v1/etl4llm/predict"  # 非必填，若要开启溯源能力则必填。如果在私有环境部署了服务，可以填入地址：http://ip:port/v1/etl4llm/predict。注意：添加地址后，需要手动刷新页面后在知识库中上传文档。
 
 llm_request:
   # 控制技能 LLM 组件模型访问的超时配置, 以下是默认值
@@ -36,7 +36,7 @@ dialog_tips:
 
 env:
   # 聊天窗口快捷搜索功能使用的搜索引擎，默认为百度，可以配置为内部文档搜索
-  # dialog_quick_search: http://www.baidu.com/s?wd=
+  dialog_quick_search: http://www.baidu.com/s?wd=
   # 当用户的环境前面的网关，不能在同一个端口上既有http又有socket时，需要这个配置，将两个请求区分开，默认可以不用
   # websocket_url: 192.168.106.120:3003
   office_url: http://IP:8701 # onlyoffice 组件地址，需要浏览器能直接访问

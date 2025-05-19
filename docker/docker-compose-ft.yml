@@ -1,6 +1,6 @@
 services:
   ft_server:
-    container_name: bisheng-ft-server
+    container_name: yue-ft-server
     image: dataelement/bisheng-ft:v0.2.0
     ports:
       - "8000:8000"

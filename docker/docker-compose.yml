@@ -1,19 +1,20 @@
 services:
   mysql:
-    container_name: bisheng-mysql
+    container_name: yue-mysql
     image: mysql:8.0
     
     ports:
-      - "3306:3306"
+      - "9008:3306"
     environment:
-      MYSQL_ROOT_PASSWORD: "1234"  # 数据库密码，如果修改需要同步修改bisheng/congfig/config.yaml配置database_url的mysql连接密码
+      MYSQL_ROOT_PASSWORD: "Mxc#20250516"  # 数据库密码，如果修改需要同步修改bisheng/congfig/config.yaml配置database_url的mysql连接密码
       MYSQL_DATABASE: bisheng
       TZ: Asia/Shanghai
     volumes:
       - ${DOCKER_VOLUME_DIRECTORY:-.}/mysql/conf/my.cnf:/etc/mysql/my.cnf
       - ${DOCKER_VOLUME_DIRECTORY:-.}/mysql/data:/var/lib/mysql
+      - ${DOCKER_VOLUME_DIRECTORY:-.}/mysql/files:/var/lib/mysql-files
     healthcheck:
-      test: ["CMD-SHELL", "exit | mysql -u root -p$$MYSQL_ROOT_PASSWORD"]
+      test: ["CMD-SHELL", "mysqladmin ping -u root -p'$${MYSQL_ROOT_PASSWORD}' || exit 1"]
       start_period: 30s
       interval: 20s
       timeout: 10s
@@ -21,7 +22,7 @@ services:
     restart: on-failure
 
   redis:
-    container_name: bisheng-redis
+    container_name: yue-redis
     image: redis:7.0.4
     ports:
       - "6379:6379"
@@ -39,7 +40,7 @@ services:
     restart: on-failure
 
   office:
-    container_name: bisheng-office
+    container_name: yue-office
     image: onlyoffice/documentserver:7.1.1
     ports:
       - "8701:80"
@@ -52,9 +53,9 @@ services:
     restart: on-failure
 
   backend:
-    container_name: bisheng-backend
+    container_name: yue-backend
     ports:
-      - "7860:7860"
+      - "9001:7860"
     environment:
       TZ: Asia/Shanghai
       BS_MILVUS_CONNECTION_ARGS: '{"host":"milvus","port":"19530","user":"","password":"","secure":false}'
@@ -94,9 +95,9 @@ services:
       dockerfile: Dockerfile
 
   frontend:
-    container_name: bisheng-frontend
+    container_name: yue-frontend
     ports:
-      - "3001:3001"
+      - "9011:3001"
     environment:
       TZ: Asia/Shanghai
     volumes:
@@ -110,7 +111,7 @@ services:
       dockerfile: Dockerfile
 
   elasticsearch:
-    container_name: bisheng-es
+    container_name: yue-es
     image: docker.io/bitnami/elasticsearch:8.12.0
     user: root
     ports:

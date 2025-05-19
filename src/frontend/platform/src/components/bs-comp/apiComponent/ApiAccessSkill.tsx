@@ -293,7 +293,7 @@ def upload_file(local_path: str):
                         language={'bash'}
                         style={oneDark}
                     >
-                        {`response = requests.post(url="http://104.171.203.178:7860/api/v1/process/940a528f-eccc-4d43-aa19-55c4725645cf",
+                        {`response = requests.post(url="http://106.14.25.208:7860/api/v1/process/940a528f-eccc-4d43-aa19-55c4725645cf",
     json={"inputs": {"report_name":"","id":"Report-tuc6Q"}, "tweaks": tweaks})
 
 print(response.text)`}
