@@ -1,7 +1,13 @@
 services:
+<<<<<<< HEAD
   yue-unstructured:
     container_name: yue-unstructured
     image: dataelement/bisheng-unstructured:v0.0.3.11
+=======
+  bisheng-unstructured:
+    container_name: bisheng-unstructured
+    image: dataelement/bisheng-unstructured:v0.0.3.14
+>>>>>>> upstream/main
     ports:
       - "10001:10001"
     environment:

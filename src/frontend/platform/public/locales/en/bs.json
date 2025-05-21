@@ -240,7 +240,7 @@
     "searchLabels": "Search labels",
     "confirmed": "Confirmed",
     "confirm": "Confirm",
-    "runNewWorkflow": "Run New Workflow",
+    "runNewWorkflow": "Run New Chat",
     "chatEndMessage": "This chat has ended"
   },
   "model": {
@@ -903,9 +903,19 @@
     "10528": "{{type}}node execution exceeds maximum number of times",
     "10529": "Workflow name already exists",
     "10530": "Template name already exists",
+<<<<<<< HEAD
     "10531": "{{type}} has been upgraded. You need to delete it and drag it in again.",
     "10532": "The workflow version has been upgraded, please contact the creator to rearrange it",
     "10540": "Server thread pool is full, please try again later",
+=======
+    "10900": "Knowledge base name already exists",
+    "10901": "Knowledge base must select an embedding model",
+    "10910": "Current knowledge base version does not support segment modification. Please create a new knowledge base to modify segments.",
+    "10800": "Service provider name already exists, please modify",
+    "10801": "Model cannot be duplicated",
+    "10700": "Tag already exists",
+    "10701": "Tag not found",
+>>>>>>> upstream/main
     "10600": "Incorrect username or password",
     "10601": "Your password has expired, please change it",
     "10602": "User has not set a password, please contact the administrator to reset the password",
@@ -929,7 +939,7 @@
   "all": "All",
   "confirmButton": "Confirm",
   "add": "Add",
-  "back": "Back",
+  "back": "Return",
   "create": "Create",
   "delete": "Delete",
   "deleteSuccess": "Delete successful",
