@@ -10,6 +10,7 @@ import {
     ModelIcon,
     QuitIcon,
     SystemIcon,
+
     TechnologyIcon
 } from "@/components/bs-icons";
 import { ChatIcon } from "@/components/bs-icons/menu/chat";
@@ -87,6 +88,17 @@ export default function MainLayout() {
                     <div className="flex">
                         <TooltipProvider>
                             <Tooltip>
+                                <TooltipTrigger className="h-8 w-8 bg-header-icon rounded-lg cursor-pointer my-4" onClick={() => window.open('https://czy.aisino.com/#/login?redirect=%2Fdashboard', '_blank')}>
+                                    <div className="">
+                                        <BookOpenIcon className="side-bar-button-size dark:text-slate-50 mx-auto w-[17px] h-[17px]" />
+                                    </div>
+                                </TooltipTrigger>
+                                <TooltipContent><p>财税</p></TooltipContent>
+                            </Tooltip>
+                        </TooltipProvider>
+                        <Separator className="mx-[4px] dark:bg-[#111111]" orientation="vertical" />
+                        <TooltipProvider>
+                            <Tooltip>
                                 <TooltipTrigger className="h-8 w-8 bg-header-icon rounded-lg cursor-pointer my-4" onClick={() => setDark(!dark)}>
                                     <div className="">
                                         {dark ? (
@@ -99,6 +111,7 @@ export default function MainLayout() {
                                 <TooltipContent><p>{t('menu.themeSwitch')}</p></TooltipContent>
                             </Tooltip>
                         </TooltipProvider>
+                        <Separator className="mx-[23px] h-6 border-l my-5 border-[#dddddd]" orientation="vertical" />
                         <Separator className="mx-[4px] dark:bg-[#111111]" orientation="vertical" />
                         <TooltipProvider>
                             <Tooltip>
