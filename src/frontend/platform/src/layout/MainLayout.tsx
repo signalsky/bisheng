@@ -96,7 +96,6 @@ export default function MainLayout() {
                                 <TooltipContent><p>财税</p></TooltipContent>
                             </Tooltip>
                         </TooltipProvider>
-                        <Separator className="mx-[4px] dark:bg-[#111111]" orientation="vertical" />
                         <TooltipProvider>
                             <Tooltip>
                                 <TooltipTrigger className="h-8 w-8 bg-header-icon rounded-lg cursor-pointer my-4" onClick={() => setDark(!dark)}>
@@ -111,7 +110,6 @@ export default function MainLayout() {
                                 <TooltipContent><p>{t('menu.themeSwitch')}</p></TooltipContent>
                             </Tooltip>
                         </TooltipProvider>
-                        <Separator className="mx-[23px] h-6 border-l my-5 border-[#dddddd]" orientation="vertical" />
                         <Separator className="mx-[4px] dark:bg-[#111111]" orientation="vertical" />
                         <TooltipProvider>
                             <Tooltip>
