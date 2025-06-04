@@ -142,7 +142,7 @@ export default function Landing({ Header, isNew }: { Header?: ReactNode; isNew?:
           </div>
         ) : (
           <h2 className="mb-5 max-w-[75vh] px-12 text-center text-lg font-medium dark:text-white md:px-0 md:text-2xl">
-            我是正合AI工作台，很高兴见到你！
+            我是灼见智能工作台，很高兴见到你！
           </h2>
         )} */}
         {/* 引导词 */}
